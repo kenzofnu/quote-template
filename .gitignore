@@ -1,0 +1,45 @@
+# .gitignore stops certain file patterns from ever becoming tracked by Git.
+# Syntax for .gitignore is documented at <https://git-scm.com/docs/gitignore>
+
+.gradle
+.classes
+.settings
+bin
+classes
+build
+*.ipr
+*.iws
+*.war
+*.jar
+*.log
+*.tar.gz
+*.tgz
+*.zip
+.DS_Store
+.idea
+
+# Eclipse project meta-files
+**/.classpath
+**/.project
+**/.settings
+**/classes/
+**/bin
+**/.externalToolBuilders
+
+# In UNIX convention, a filename that ends in tilde is considered a backup of something.
+**/*~
+
+gradlew.bat
+**/docker/GROW/
+**/docker/lib/
+**/docker/agentlib/
+
+# Postgresql dump files
+**/*.pgc
+
+# Vim temporary files
+**/*.swp
+
+# Maven
+target
+.mvn

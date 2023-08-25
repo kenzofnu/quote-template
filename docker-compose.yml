@@ -1,0 +1,17 @@
+version: "3"
+
+networks:
+  infrastructure:
+    external: true
+
+services:
+  secore-template:
+    image: inomial.io/secore-template:${VERSION:-latest}
+    environment:
+      # Enable the JVM debugger on internal port 9009/tcp (devstack only).
+      JAVA_OPTS: "${JAVA_OPTS:--javaagent:/opt/inomial.com/agentlib/jacocoagent.jar=destfile=/opt/inomial.com/agentlib/jacoco.exec,append=false -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9009}"
+      #LOG_LEVEL: "DEBUG"
+    volumes:
+    - ./docker/agentlib:/opt/inomial.com/agentlib
+    networks:
+    - infrastructure
