@@ -1,5 +1,7 @@
 package com.telflow.quote.template;
 
+import org.eclipse.jetty.util.ajax.JSON;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -27,23 +29,11 @@ public interface GenerateAPI {
     Response ping();
 
     @POST
-    @Path("address")
+    @Path("generate")
     @Consumes(MediaType.APPLICATION_XML)
     @Produces(MediaType.APPLICATION_XML)
-    Response queryAddressSearch(@HeaderParam(TELFLOW_CORRELATION_ID) String telflowCorrelationId, String request);
+    JSON generateResponse(JSON request);
 
-    @POST
-    @Path("address/{id}")
-    @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.APPLICATION_XML)
-    Response getAddressById(@HeaderParam(TELFLOW_CORRELATION_ID) String telflowCorrelationId, String request,
-                            @PathParam("id") String id);
 
-    @POST
-    @Path("availability")
-    @Consumes(MediaType.APPLICATION_XML)
-    @Produces(MediaType.APPLICATION_XML)
-    Response performServiceQualification(@HeaderParam(TELFLOW_CORRELATION_ID) String telflowCorrelationId,
-                                         String request);
 
 }

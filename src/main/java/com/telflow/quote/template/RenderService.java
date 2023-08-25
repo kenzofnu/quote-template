@@ -1,7 +1,10 @@
 package com.telflow.quote.template;
 
+import org.eclipse.jetty.util.ajax.JSON;
+
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.Response;
+import java.security.Key;
 
 public class RenderService extends Application implements RenderAPI {
     @Override
@@ -10,17 +13,11 @@ public class RenderService extends Application implements RenderAPI {
     }
 
     @Override
-    public Response queryAddressSearch(String telflowCorrelationId, String request) {
-        return null;
+    public String renderResponse(JSON request) {
+        String response=JSON.toString(request);
+        return response;
     }
 
-    @Override
-    public Response getAddressById(String telflowCorrelationId, String request, String id) {
-        return null;
-    }
 
-    @Override
-    public Response performServiceQualification(String telflowCorrelationId, String request) {
-        return null;
-    }
-}
+};
+
