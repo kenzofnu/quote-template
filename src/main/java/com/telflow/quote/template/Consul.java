@@ -7,10 +7,11 @@
  * You may obtain a copy of the License at http://www.dgit.biz/license
  */
 
-package com.inomial.secore.template;
+package com.telflow.quote.template;
 
 import com.inomial.secore.mon.MonitoringServer;
 import com.telflow.factory.configuration.management.ConsulManager;
+
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;

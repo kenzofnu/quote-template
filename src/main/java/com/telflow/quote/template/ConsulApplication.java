@@ -1,5 +1,5 @@
 
-package com.inomial.secore.template;
+package com.telflow.quote.template;
 
 import com.inomial.secore.health.Healthcheck;
 import com.inomial.secore.health.kafka.KafkaHealthcheck;
@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;

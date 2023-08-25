@@ -17,8 +17,8 @@
   <artifactId>secore-template</artifactId>
   <version>${revision}${changelist}</version>
 
-  <name>«define name»</name>
-  <description>«define description»</description>
+  <name>quote-template</name>
+  <description>quote template</description>
 
   <scm>
     <connection>scm:git:git://localhost/${basedir}</connection>
@@ -30,10 +30,10 @@
 
     <!-- Set this to the name of the application -->
     <!-- Also adjust ConsulApplication to suit -->
-    <component.name>set__component_name__in_pom_xml</component.name>
+    <component.name>quote-template</component.name>
 
     <defaultJavaOpts>-Xms256m -Xmx256m</defaultJavaOpts>
-    <mainClass>com.inomial.secore.template.Main</mainClass>
+    <mainClass>com.telflow.secore.template.Main</mainClass>
 
     <component.home>/opt/telflow/${component.name}</component.home>
     <app.name>telflow-${component.name}</app.name>
@@ -220,6 +220,11 @@
       <artifactId>slf4j-nop</artifactId>
       <version>${slf4j.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.spec.javax.ws.rs</groupId>
+      <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+      <version>2.0.1.Final</version>
     </dependency>
   </dependencies>
 

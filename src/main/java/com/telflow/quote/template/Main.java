@@ -1,9 +1,11 @@
 
-package com.inomial.secore.template;
+package com.telflow.quote.template;
 
 import com.inomial.secore.health.HealthcheckServer;
 import com.inomial.secore.health.InitialisedHealthCheck;
 import java.util.concurrent.CountDownLatch;
+
+import com.telflow.quote.template.ConsulApplication;
 import org.slf4j.LoggerFactory;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
